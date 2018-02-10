@@ -1,0 +1,90 @@
+$sb-badge-background: #000;
+$sb-breakpoint-small: 480px;
+$sb-breakpoint-medium: 768px;
+$sb-breakpoint-large: 960px;
+$sb-breakpoint-xlarge: 1220px;
+$sb-breakpoint-mini-max: ($sb-breakpoint-small - 1);
+$sb-breakpoint-small-max: ($sb-breakpoint-medium - 1);
+$sb-breakpoint-medium-max: ($sb-breakpoint-large - 1);
+$sb-breakpoint-large-max: ($sb-breakpoint-xlarge - 1);
+
+$brand-color: #357F8A;
+
+$global-gutter: 20px;
+$global-medium-gutter: 20px;
+$global-small-gutter: 20px;
+$global-gutter: 20px;
+$global-medium-gutter: 30px;
+$global-large-gutter: 40px;
+$global-border-width: 20px;
+$global-border: 20px;
+$inverse-global-border: 1px;
+
+$utility-container-max-width: 980px !default;
+$utility-container-padding-horizontal: 25px !default;
+
+$utility-container-large-max-width: 1200px !default;
+$utility-container-large-padding-horizontal: 35px !default;
+
+$utility-align-horizontal: 15px !default;
+$utility-align-vertical: 15px !default;
+
+$utility-height-viewport-min-height: 600px !default;
+
+$utility-margin: 15px !default;
+$utility-margin-small: 5px !default;
+$utility-margin-large: 50px !default;
+$utility-margin-xlarge: 100px !default;
+
+$utility-border-rounded: 5px !default;
+
+$utility-heading-large-small-font-size: 36px !default;
+$utility-heading-large-small-line-height: 42px !default;
+$utility-heading-large-font-size: 52px !default;
+$utility-heading-large-line-height: 64px !default;
+
+$utility-link-muted-color: #444 !default;
+$utility-link-muted-hover-color: #444 !default;
+
+$utility-scrollable-text-height: 300px !default;
+
+$utility-scrollable-box-height: 170px !default;
+$utility-scrollable-box-padding: 10px !default;
+$utility-scrollable-box-border: #ddd !default;
+$utility-scrollable-box-border-width: 1px !default;
+
+
+$breakpoint-desktop-min: 840px;
+$breakpoint-desktop-max: 840px - 1px;
+
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 960px;
+$breakpoint-xlarge: 1220px;
+$breakpoint-mini-max: ($breakpoint-small - 1);
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+
+@import '_flex.scss';
+@import '_grid.scss';
+@import '_width.scss';
+@import '_u.scss';
+@import '_product-list.scss';
+@import '_buy-btn.scss';
+@import '_product.scss';
+@import '_buy-btn.scss';
+@import '_button.scss';
+@import '_quantity-input.scss';
+@import '_minicart.scss';
+@import '_account-bar.scss';
+@import '_head.scss';
+@import '_checkout.scss';
+@import '_checkout-steps.scss';
+@import '_form.scss';
+@import '_catalogue.scss';
+@import '_tree-item.scss';
+@import '_filter-bar.scss';
+@import '_alert.scss';
+@import '_summary.scss';
+@import '_error-modal.scss';

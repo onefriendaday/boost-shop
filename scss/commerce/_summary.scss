@@ -1,0 +1,10 @@
+.sb-summary__row {
+  & > * {
+    display: inline-block;
+  }
+}
+
+.sb-summary__price {
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
