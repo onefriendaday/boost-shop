@@ -35,16 +35,16 @@
           <a :key="i" v-for="i in [0, 1, 2, 3]" href="/products/about-a-chair-1" class="product-item style--one regular color--light  lap--box--small-lg">
             <div class="box--product-image primary">
               <img
-                src="//assets.storeblok.com/s/42570/furniture1.jpg" alt="About a Chair"
-                data-srcset="//assets.storeblok.com/s/42570/furniture1.jpg 1920w"
+                src="//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture1.jpg" alt="About a Chair"
+                data-srcset="//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture1.jpg 1920w"
                 data-sizes="auto"
                 class="lazyload"
                 />
             </div>
             <div class="box--product-image secondary">
               <img
-                src="//assets.storeblok.com/s/42570/furniture1.jpg" alt="About a Chair"
-                data-srcset="//assets.storeblok.com/s/42570/furniture1.jpg 1920w"
+                src="//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture1.jpg" alt="About a Chair"
+                data-srcset="//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture1.jpg 1920w"
                 data-sizes="auto"
                 class="lazyload"
                 />

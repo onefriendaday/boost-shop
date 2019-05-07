@@ -69,7 +69,8 @@
 
                 <sb-configurator v-if="cfgVisible" @close="cfgVisible = false"></sb-configurator>
                 <sb-buy-button :product="product"
-                               config-id="umdasch:Kassa006:AEA3FB722CDF285DDC951C65C1315E9A475DA7070AAC115A17E8E1A12158F75C"></sb-buy-button>
+                               :price="product.price"
+                               config-id="usm:frame:BB3BB3E7951BC15109B1FF86D78C95DE3FB46E9F78714C46FFA2DE91866A2C2B"></sb-buy-button>
               </div>
             </form>
           </div>

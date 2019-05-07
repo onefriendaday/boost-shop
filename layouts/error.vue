@@ -4,6 +4,7 @@
       <div class="site-box-content">
         <h1>The page you’re looking for could not be found</h1>
         <p>Go to the <nuxt-link to="/">homepage</nuxt-link></p>
+        <p>{{ error }}</p>
       </div>
     </div>
   </div>

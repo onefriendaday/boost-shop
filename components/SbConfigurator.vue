@@ -7,7 +7,8 @@
         <div class="sb-configurator__add">
           <sb-buy-button :hide-quantity="true"
                          :product="product"
-                         :config-id="'umdasch:Kassa006:AEA3FB722CDF285DDC951C65C1315E9A475DA7070AAC115A17E8E1A12158F75C'"></sb-buy-button>
+                         :price="total"
+                         :config-id="configId"></sb-buy-button>
         </div>
         <button @click.prevent="$emit('close')" class="sb-configurator__close">
           <span class="hamburger-menu active" aria-hidden="true"><span class="bar animate"></span></span>
@@ -27,7 +28,7 @@ export default {
     return {
       total: 199,
       skus: [],
-      configId: 'umdasch:Kassa006:AEA3FB722CDF285DDC951C65C1315E9A475DA7070AAC115A17E8E1A12158F75C',
+      configId: 'usm:frame:BB3BB3E7951BC15109B1FF86D78C95DE3FB46E9F78714C46FFA2DE91866A2C2B',
       partList: [],
       product: {}
     }
@@ -48,6 +49,7 @@ export default {
       // RoomleConfigurator.saveCurrentConfiguration((data) => {console.log(data)})
       const initWith = 'usm:frame:BB3BB3E7951BC15109B1FF86D78C95DE3FB46E9F78714C46FFA2DE91866A2C2B'
       this.configId = initWith
+
       RoomleConfigurator.init('design-bestseller', 'roomle-stage', initWith, {debugLow: true}, (initialData) => {
         console.log(initialData)
         RoomleConfigurator.addChangeListener((data) => {
@@ -59,7 +61,10 @@ export default {
             .map((elem) => { return elem.price * elem.count })
             .reduce((a, b) => a + b, 0)
 
+          this.total = parseFloat(parseFloat(Math.round(this.total * 100) / 100).toFixed(2))
           this.skus = this.partList.map((elem) => { return elem.articleNr })
+
+          RoomleConfigurator.saveCurrentConfiguration((data) => {console.log(data)})
         })
       })
     },

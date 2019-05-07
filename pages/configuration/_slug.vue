@@ -34,10 +34,14 @@ export default {
       apiKey: 'storyblok',
       currentTenant: 9
     }).then((res) => {
-      let partList = JSON.parse(res.data.configuration.parts)
+      console.log(res.data.configuration.parts)
+      let partListObj = JSON.parse(res.data.configuration.parts)
+      let partList = partListObj.fullList
+
       let total = partList
-        .map((elem) => { return elem.price * elem.count })
+        .map((elem) => { return (elem.price || 0) * (elem.count || 1) })
         .reduce((a, b) => a + b, 0)
+        .toFixed(2)
 
       let skus = partList.map((elem) => { return elem.articleNr })
 
@@ -46,14 +50,14 @@ export default {
           '@type': 'ProductInfo',
           '@id': 'Testproduct',
           sku: 'Testproduct',
-          image: '//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture2.jpg',
-          price: 10,
+          price: parseFloat(context.query.price),
           parts: [
             { quantity: 1, product_id: 240059, url: 'http://4c9ef9f0.ngrok.io/' }
           ]
         }
       }
     }).catch((res) => {
+      console.log(res)
       if (res.response) {
         context.error({ statusCode: res.response.status, message: res.response.data })
       } else {

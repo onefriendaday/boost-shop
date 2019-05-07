@@ -25,7 +25,7 @@
 import store from '../libs/store'
 
 export default {
-  props: ['product', 'hideQuantity', 'configId'],
+  props: ['product', 'hideQuantity', 'configId', 'price'],
 
   data() {
     return {
@@ -72,13 +72,13 @@ export default {
 
     addOrderItem(id, uuid) {
       let orderItem = {
-        url: `http://aaec909a.ngrok.io/configuration/${this.configId}?id=${id}`,
+        url: `https://sb-commerce.now.sh/configuration/${this.configId}?id=${id}&price=${this.price}`,
         sku: 'Testproduct',
-        value: 10,
-        image: '//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture2.jpg',
+        value: this.price,
         quantity: this.quantity,
         meta_data: {
-          name: 'Testproduct'
+          name: 'Testproduct',
+          image: '//img3.storyblok.com/1440x0/http://assets.storeblok.com/s/42570/furniture2.jpg'
         }
       }
 
